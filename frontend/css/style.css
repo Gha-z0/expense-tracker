@@ -1,0 +1,25 @@
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+th[aria-sort="ascending"]::after {
+    content: " \25B2";
+}
+
+th[aria-sort="descending"]::after {
+    content: " \25BC";
+}
